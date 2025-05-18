@@ -1,0 +1,78 @@
+body {
+  font-family: 'Comic Sans MS', cursive;
+  background-color: #fef9f4;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.5s, color 0.5s;
+}
+
+.dark-theme {
+  background-color: #2c3e50;
+  color: #ecf0f1;
+}
+
+.top-right-buttons {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 999;
+}
+
+button {
+  margin: 5px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #ffbd59;
+  color: white;
+  cursor: pointer;
+}
+
+#about {
+  max-width: 800px;
+  margin: 80px auto 40px auto;
+  background-color: #fffaf0;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.letter {
+  display: inline-block;
+  font-size: 3rem;
+  margin: 10px;
+  padding: 10px;
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+
+.letter:hover {
+  transform: scale(1.2) rotate(10deg);
+  color: #e74c3c;
+}
+
+canvas {
+  border: 2px solid #444;
+  border-radius: 10px;
+  background-color: #fff;
+  margin-top: 10px;
+}
+
+.stars span {
+  font-size: 1.5rem;
+  color: gold;
+  margin-right: 10px;
+}
+button {
+  margin: 5px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #ffbd59;
+  color: white;
+  cursor: pointer;
+}
