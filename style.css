@@ -201,3 +201,90 @@ nav {
     height: 200px;
   }
 }
+
+
+
+footer {
+    background-color: #cce0f8;
+    color: rgb(0, 0, 0);
+    padding: 20px;
+    margin-top: auto;
+  }
+
+  .footer-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    align-items: center;
+    max-width: 100%;
+  }
+
+  .footer-item {
+    font-size: 1vw;
+  }
+
+  .footer-item h3 {
+    font-size: 1.7rem;
+    text-decoration: underline;
+    margin-bottom: 5px;
+  }
+
+  .footer-item ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+  }
+
+  .footer-item li {
+    margin: 5px 0;
+  }
+
+  .footer-item a {
+    color: rgb(16, 63, 19);
+    text-decoration: none;
+    font-size: 1.2rem;
+  }
+
+  .footer-item a:hover {
+    text-decoration: underline;
+  }
+
+  .social-icons i {
+    font-size: 2rem;
+    margin: 0 10px;
+    color: rgb(16, 63, 19);
+    transition: 0.3s;
+  }
+
+  .fa-square-instagram {
+    color: #000;
+    transition: 0.4s ease;
+  }
+
+  .fa-square-instagram:hover {
+    background: linear-gradient(
+      45deg,
+      #feda75,
+      #fa7e1e,
+      #d62976,
+      #962fbf,
+      #4f5bd5
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transform: scale(1.2);
+  }
+
+  .fa-youtube:hover {
+    color: #ff0000;
+  }
+
+  .fa-square-whatsapp:hover {
+    color: #25d366;
+  }
+
+  .fa-facebook:hover {
+    color: #1877f2;
+  }
+
