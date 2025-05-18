@@ -2,6 +2,57 @@ body {
   background-color: rgb(197, 196, 194);
 }
 
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+    width: 100%;
+    padding: 0 5vw;
+    background-color:#cce0f8;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 2px 5px rgba(233, 32, 32, 0.1);
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+
+  .logo i{
+      font-size: 2rem;
+      margin: 0 10px;
+      color: rgb(16, 63, 19);
+      transition: 0.3s;
+  }
+
+  .nav-info {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .nav-info li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 25px;
+    padding: 10px 15px;
+    border-radius: 10px;
+    transition: 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .nav-info li a:hover {
+    transform: scale(1.05);
+  }
+
+
 #alphabetContainer {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
