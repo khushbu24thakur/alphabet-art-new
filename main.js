@@ -1,6 +1,5 @@
 const container = document.getElementById("alphabetContainer");
 
-
 const imageUrls = [
   "images/A.png", "images/B.png", "images/C.png", "images/D.png", "images/E.png", "images/F.png",
   "images/G.png", "images/H.png", "images/I.png", "images/J.png", "images/K.png", "images/L.png",
@@ -9,13 +8,11 @@ const imageUrls = [
   "images/Y.png", "images/Z.png"
 ];
 
-
 const words = [
   "Alien", "Butterfly", "Cat", "Dinosaur", "Eagle", "Flower", "Giraffe", "Hammer", "Ice", "Jellyfish",
   "Keys", "Lamp", "Mountains", "Ninja", "Omelette", "Pirate", "Queen", "Rabbit", "Snowman", "Tree",
   "Unicorn", "Volcano", "Watermelon", "X-Ray", "Yak", "Zebra"
 ];
-
 
 const audioUrls = [
   "audio/A-for-alien.mp3", "audio/B-for-butterfly.mp3", "audio/C-for-cat.mp3", "audio/D-for-Dinosaur.mp3",
@@ -25,7 +22,6 @@ const audioUrls = [
   "audio/R-for-rabbit.mp3", "audio/S-for-snowman.mp3", "audio/T-for-tree.mp3", "audio/U-for-unicorn.mp3", "audio/V-for-volcano.mp3", "audio/W-for-watermelon.mp3",
   "audio/X-for-x-ray.mp3", "audio/Y-for-yak.mp3","audio/Z-for-zebra.mp3"
 ];
-
 
 const colors = {
   A: '#FFB800', B: '#8030D4', C: '#1375E4',
@@ -39,67 +35,63 @@ const colors = {
   Y: '#FFB800', Z: '#8030D4'
 };
 
-
 let currentAudio = null;
-
 
 for (let i = 65; i <= 90; i++) {
   const index = i - 65;
   const letter = String.fromCharCode(i);
 
-
   const cardWrapper = document.createElement("div");
   cardWrapper.className = "flip-card";
-
 
   const cardInner = document.createElement("div");
   cardInner.className = "flip-card-inner";
 
-
   const front = document.createElement("div");
   front.className = "flip-card-front";
-
-
-  front.style.backgroundColor = colors[letter]
-
-
+  front.style.backgroundColor = colors[letter];
   front.textContent = letter;
-
 
   const back = document.createElement("div");
   back.className = "flip-card-back";
 
+  const backContent = document.createElement("div");
+  backContent.className = "back-content";
 
+  
   const backImg = document.createElement("img");
   backImg.src = imageUrls[index];
   backImg.alt = `${letter} image`;
 
+  const wordWrapper = document.createElement("div");
+  wordWrapper.className = "word-wrapper";
 
-  const wordDiv = document.createElement("div");
-  wordDiv.textContent = words[index];
+  const alphabetWord = document.createElement("div");
+  alphabetWord.className = "word";
+  alphabetWord.textContent = `${words[index]}`;
+  wordWrapper.appendChild(alphabetWord);
 
+  backContent.appendChild(backImg);
+  backContent.appendChild(wordWrapper);
 
-  back.appendChild(backImg);
-  back.appendChild(wordDiv);
-
+  back.appendChild(backContent);
 
   cardInner.appendChild(front);
   cardInner.appendChild(back);
   cardWrapper.appendChild(cardInner);
   container.appendChild(cardWrapper);
 
-
   cardWrapper.addEventListener("click", () => {
     cardInner.classList.toggle("flip");
-
 
     if (currentAudio) {
       currentAudio.pause();
       currentAudio.currentTime = 0;
     }
 
-
     currentAudio = new Audio(audioUrls[index]);
     currentAudio.play();
   });
 }
+
+console.log(container);
